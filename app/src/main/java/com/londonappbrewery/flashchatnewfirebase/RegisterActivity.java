@@ -16,7 +16,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 
 public class RegisterActivity extends AppCompatActivity {
@@ -27,6 +30,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     // TODO: Add member variables here:
     // UI references.
+    private FirebaseAuth mAuth;
     private AutoCompleteTextView mEmailView;
     private AutoCompleteTextView mUsernameView;
     private EditText mPasswordView;
@@ -60,7 +64,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         // TODO: Get hold of an instance of FirebaseAuth
 
-
+    mAuth = FirebaseAuth.getInstance();
     }
 
     // Executed when Sign Up button is pressed.
@@ -105,7 +109,7 @@ public class RegisterActivity extends AppCompatActivity {
             focusView.requestFocus();
         } else {
             // TODO: Call create FirebaseUser() here
-
+                createFirebaseUser();
         }
     }
 
@@ -121,9 +125,34 @@ public class RegisterActivity extends AppCompatActivity {
 
     // TODO: Create a Firebase user
 
+    private void createFirebaseUser(){
+        String email, password;
 
+        email = mEmailView.getText().toString();
+        password= mPasswordView.getText().toString();
+        mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                Log.d("Flash","Criado com sucesso" + task.isSuccessful());
+                if (!task.isSuccessful()){
+                    Log.d("Flash","Erro na criação");
+                } else {
+                    saveDisplayName();
+                    Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                    finish();
+                    startActivity(intent);
+                }
+            }
+        });
+    }
     // TODO: Save the display name to Shared Preferences
 
+    private void saveDisplayName() {
+        String displayName = mUsernameView.getText().toString();
+
+        SharedPreferences prefs = getSharedPreferences(CHAT_PREFS,0);
+        prefs.edit().putString(DISPLAY_NAME_KEY, displayName).apply();
+    }
 
     // TODO: Create an alert dialog to show in case registration failed
 

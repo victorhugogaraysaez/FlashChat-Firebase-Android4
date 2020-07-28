@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "266978114684",
+    "firebase_url": "https://chat-da42a.firebaseio.com",
+    "project_id": "chat-da42a",
+    "storage_bucket": "chat-da42a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:266978114684:android:59560ff5eb2dfb32d21df9",
+        "android_client_info": {
+          "package_name": "com.Umbrella.flashchatnewfirebase.LoginActivity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "266978114684-end142sg2b8h2ki21et5t6cilettibs1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4sIYzbyDJA1ZQf90aKGHUqbPNvemoctw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "266978114684-end142sg2b8h2ki21et5t6cilettibs1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:266978114684:android:dd0867028005526ed21df9",
+        "android_client_info": {
+          "package_name": "com.londonappbrewery.flashchatnewfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "266978114684-end142sg2b8h2ki21et5t6cilettibs1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4sIYzbyDJA1ZQf90aKGHUqbPNvemoctw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "266978114684-end142sg2b8h2ki21et5t6cilettibs1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
