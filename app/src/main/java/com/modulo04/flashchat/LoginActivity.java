@@ -1,4 +1,4 @@
-package com.londonappbrewery.flashchatnewfirebase;
+package com.modulo04.flashchat;
 
 import android.app.AlertDialog;
 import android.content.Intent;
@@ -51,6 +51,8 @@ public class LoginActivity extends AppCompatActivity {
         // TODO: Grab an instance of FirebaseAuth
 
         mAuth = FirebaseAuth.getInstance();
+
+
     }
 
     // Executed when Sign in button pressed
@@ -61,7 +63,7 @@ public class LoginActivity extends AppCompatActivity {
 
     // Executed when Register button pressed
     public void registerNewUser(View v) {
-        Intent intent = new Intent(this, com.londonappbrewery.flashchatnewfirebase.RegisterActivity.class);
+        Intent intent = new Intent(this, com.modulo04.flashchat.RegisterActivity.class);
         finish();
         startActivity(intent);
     }

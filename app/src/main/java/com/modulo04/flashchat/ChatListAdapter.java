@@ -1,4 +1,4 @@
-package com.londonappbrewery.flashchatnewfirebase;
+package com.modulo04.flashchat;
 
 import android.app.Activity;
 import android.content.Context;

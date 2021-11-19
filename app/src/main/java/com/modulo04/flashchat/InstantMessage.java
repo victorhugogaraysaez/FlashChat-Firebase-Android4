@@ -1,4 +1,4 @@
-package com.londonappbrewery.flashchatnewfirebase;
+package com.modulo04.flashchat;
 
 public class InstantMessage {
     private String message;
